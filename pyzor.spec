@@ -17,6 +17,7 @@ Source0:        %name-%version.tar.bz2
 Patch0:		%name-python_path.patch
 Patch1:		%name-handle_digest_is_none.patch
 Patch2:		%name-handle_unknown_encoding.patch
+BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:	python-devel
 Requires:	python
 BuildArch:      noarch
