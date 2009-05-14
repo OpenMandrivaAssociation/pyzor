@@ -1,6 +1,6 @@
 %define name    pyzor
-%define version	0.4.0
-%define release	%mkrel 13
+%define version	0.5.0
+%define release	%mkrel 1
 
 %define summary Pyzor is a collaborative system to detect and block spam
 
@@ -12,11 +12,8 @@ Version:        %version
 Release:        %release
 License:        GPL
 Group:          Networking/Mail
-URL:            http://pyzor.sourceforge.net/
+URL:            http://pyzor.org/
 Source0:        %name-%version.tar.bz2
-Patch0:		%name-python_path.patch
-Patch1:		%name-handle_digest_is_none.patch
-Patch2:		%name-handle_unknown_encoding.patch
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:	python-devel
 Requires:	python
@@ -36,9 +33,6 @@ their own independent servers. Server peering is planned for a future release.
 
 %prep
 %setup -q
-%patch0 -p0 -b .%name-python_patch.patch
-%patch1 -p0 -b .%name-handle_digest_is_none.patch
-%patch2 -p0 -b .%name-handle_unknown_encoding.patch
 
 
 %build
@@ -56,7 +50,7 @@ rm -rf %buildroot
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING README INSTALL ChangeLog THANKS NEWS UPGRADING
+%doc COPYING README INSTALL THANKS NEWS UPGRADING
 %doc docs/usage.html
 %{py_puresitedir}/%{name}/
 %{py_puresitedir}/*.egg-info
