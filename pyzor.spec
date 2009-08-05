@@ -14,9 +14,6 @@ License:        GPLv2
 Group:          Networking/Mail
 URL:            http://pyzor.org/
 Source0:        %name-%version.tar.bz2
-# error fixed in trunk, 
-# http://pyzor.svn.sourceforge.net/viewvc/pyzor?view=rev&revision=226
-Patch0:         pyzor-no_warning_python_26.diff
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:	python-devel
 Requires:	python
@@ -36,7 +33,6 @@ their own independent servers. Server peering is planned for a future release.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %__python setup.py build
