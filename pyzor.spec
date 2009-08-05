@@ -1,6 +1,6 @@
 %define name    pyzor
 %define version	0.5.0
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 %define summary Pyzor is a collaborative system to detect and block spam
 
@@ -10,10 +10,11 @@ Summary:        %summary
 Name:           %name
 Version:        %version
 Release:        %release
-License:        GPL
+License:        GPLv2
 Group:          Networking/Mail
 URL:            http://pyzor.org/
 Source0:        %name-%version.tar.bz2
+Patch0:         pyzor-no_warning_python_26.diff
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:	python-devel
 Requires:	python
@@ -33,7 +34,7 @@ their own independent servers. Server peering is planned for a future release.
 
 %prep
 %setup -q
-
+%patch0 -p0
 
 %build
 %__python setup.py build
