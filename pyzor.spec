@@ -55,3 +55,49 @@ rm -rf %buildroot
 %_bindir/*
 
 
+
+
+%changelog
+* Wed Aug 05 2009 Michael Scherer <misc@mandriva.org> 0.5.0-3mdv2010.0
++ Revision: 410314
+- rebuild
+- remove useless spec define
+- my patch was not working and is not complete, so i removed it
+
+* Wed Aug 05 2009 Michael Scherer <misc@mandriva.org> 0.5.0-2mdv2010.0
++ Revision: 410231
+- fix license
+- remove warning on sha1 ( patch need to be rework before being sent to upstream )
+
+* Thu May 14 2009 Frederic Crozat <fcrozat@mandriva.com> 0.5.0-1mdv2010.0
++ Revision: 375669
+- Release 0.5.0
+- Update url
+- Remove patches 0, 1, 2 (merged upstream)
+
+* Tue Jan 06 2009 Funda Wang <fwang@mandriva.org> 0.4.0-13mdv2009.1
++ Revision: 326000
+- rebuild
+
+* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 0.4.0-12mdv2009.0
++ Revision: 259903
+- rebuild
+
+* Fri Jul 25 2008 Thierry Vignaud <tv@mandriva.org> 0.4.0-11mdv2009.0
++ Revision: 247750
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 0.4.0-9mdv2008.1
++ Revision: 140738
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Tue Dec 05 2006 Michael Scherer <misc@mandriva.org> 0.4.0-9mdv2007.0
++ Revision: 91365
+- rebuild for new python
+- use macro, and include .egg-info files
+- Import pyzor
+
