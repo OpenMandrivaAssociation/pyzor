@@ -1,6 +1,6 @@
 %define name    pyzor
 %define version	0.5.0
-%define release	%mkrel 3
+%define release	4
 
 %define summary Pyzor is a collaborative system to detect and block spam
 
