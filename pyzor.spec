@@ -10,7 +10,7 @@ Version:        %version
 Release:        %release
 License:        GPLv2
 Group:          Networking/Mail
-URL:            http://pyzor.org/
+URL:            https://pyzor.org/
 Source0:        %name-%version.tar.bz2
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:	python-devel
